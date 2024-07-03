@@ -1,0 +1,1142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240703 22:38:30.020" rpa="false" schemaversion="4">
+<suite id="s1" name="Miguel Jesus Moreno Hernandez" source="D:\PruebaTecnica\Miguel_Jesus_Moreno_Hernandez">
+<suite id="s1-s1" name="Tests" source="D:\PruebaTecnica\Miguel_Jesus_Moreno_Hernandez\tests">
+<suite id="s1-s1-s1" name="testAlten" source="D:\PruebaTecnica\Miguel_Jesus_Moreno_Hernandez\tests\testAlten.robot">
+<test id="s1-s1-s1-t1" name="Verify Sector pages" line="7">
+<kw name="Open Alten Page" library="keywords">
+<doc>This keyword opens url parameter and maximize window</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n==== Starting Test ====\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240703 22:38:30.312" endtime="20240703 22:38:30.313"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240703 22:38:30.314" level="INFO">Opening browser 'Chrome' to base url 'https://www.alten.es/'.</msg>
+<status status="PASS" starttime="20240703 22:38:30.313" endtime="20240703 22:38:35.058"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240703 22:38:35.058" endtime="20240703 22:38:35.127"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BUT_ACCEPT_COOKIES}</arg>
+<arg>30</arg>
+<arg>error= Button Cookies has not loaded</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240703 22:38:35.128" endtime="20240703 22:38:36.045"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${BUT_ACCEPT_COOKIES}</arg>
+<arg>30</arg>
+<arg>error= Button Cookies is not enabled</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240703 22:38:36.045" endtime="20240703 22:38:36.067"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUT_ACCEPT_COOKIES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240703 22:38:36.068" level="INFO">Clicking element '//button[@id="tarteaucitronPersonalize2"]'.</msg>
+<status status="PASS" starttime="20240703 22:38:36.068" endtime="20240703 22:38:36.137"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${HOME}</arg>
+<arg>message= Page has not loaded correctly</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20240703 22:38:36.141" level="INFO">Page title is 'Home - ALTEN Spain'.</msg>
+<status status="PASS" starttime="20240703 22:38:36.137" endtime="20240703 22:38:36.142"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>filename=Main_Page_Loaded.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240703 22:38:36.391" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Main_Page_Loaded.png"&gt;&lt;img src="Main_Page_Loaded.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240703 22:38:36.142" endtime="20240703 22:38:36.392"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n==== Browser Opened and Maximized ====\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240703 22:38:36.392" endtime="20240703 22:38:36.393"/>
+</kw>
+<status status="PASS" starttime="20240703 22:38:30.312" endtime="20240703 22:38:36.393"/>
+</kw>
+<kw name="Open drowpdown Sectores and choose &quot;Administración Pública&quot;" library="keywords" sourcename="Open drowpdown Sectores and choose &quot;${option}&quot;">
+<doc>Opens dropdown Sectores and choose the option that we gives as parameter</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n==== Verify step: Open drowpdown Sectores and choose "${option}" ====\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240703 22:38:36.394" endtime="20240703 22:38:36.395"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<arg>30</arg>
+<arg>error= The dropdown "Sectores" has not loaded</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240703 22:38:36.395" endtime="20240703 22:38:36.412"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<arg>30</arg>
+<arg>error= The dropdown "Sectores" is not enabled</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240703 22:38:36.412" endtime="20240703 22:38:36.431"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240703 22:38:36.432" level="INFO">Simulating Mouse Over on element '//ul[@id="menu-header-es-1"]//span[text()="Sectores"]'.</msg>
+<status status="PASS" starttime="20240703 22:38:36.431" endtime="20240703 22:38:36.712"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<arg>error= The option "${option}" has not loaded correctly</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240703 22:38:36.712" endtime="20240703 22:38:36.729"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<arg>error= The option "${option}" is not enabled</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240703 22:38:36.729" endtime="20240703 22:38:36.746"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240703 22:38:36.747" level="INFO">Clicking element '//ul[@id="menu-header-es-1"]//span[text()="Administración Pública"]'.</msg>
+<status status="PASS" starttime="20240703 22:38:36.747" endtime="20240703 22:38:38.009"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<var>${option_is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//h1[text()="${option}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//h1[text()="${option}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240703 22:38:38.433" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-42.png"&gt;&lt;img src="selenium-screenshot-42.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240703 22:38:38.433" level="FAIL">Element with locator '//h1[text()="Administración Pública"]' not found.</msg>
+<status status="FAIL" starttime="20240703 22:38:38.010" endtime="20240703 22:38:38.437"/>
+</kw>
+<msg timestamp="20240703 22:38:38.437" level="INFO">${option_is_visible} = ('FAIL', 'Element with locator \'//h1[text()="Administración Pública"]\' not found.')</msg>
+<status status="PASS" starttime="20240703 22:38:38.010" endtime="20240703 22:38:38.438"/>
+</kw>
+<kw name="Convert To Upper Case" library="String">
+<var>${option_uppercase}</var>
+<arg>${option}</arg>
+<doc>Converts string to upper case.</doc>
+<msg timestamp="20240703 22:38:38.438" level="INFO">${option_uppercase} = ADMINISTRACIÓN PÚBLICA</msg>
+<status status="PASS" starttime="20240703 22:38:38.438" endtime="20240703 22:38:38.439"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<var>${option_uppercase_is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//h1[text()="${option_uppercase}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//h1[text()="${option_uppercase}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240703 22:38:38.457" level="INFO">Element '//h1[text()="ADMINISTRACIÓN PÚBLICA"]' is displayed.</msg>
+<status status="PASS" starttime="20240703 22:38:38.439" endtime="20240703 22:38:38.457"/>
+</kw>
+<msg timestamp="20240703 22:38:38.457" level="INFO">${option_uppercase_is_visible} = ('PASS', None)</msg>
+<status status="PASS" starttime="20240703 22:38:38.439" endtime="20240703 22:38:38.458"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${option_is_visible}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>filename=Page_${option}_Loaded.png</arg>
+<arg>ELSE IF</arg>
+<arg>${option_uppercase_is_visible}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>filename=Page_${option}_Loaded.png</arg>
+<arg>ELSE</arg>
+<arg>Log Error And Generate CSV</arg>
+<arg>error_message="Page ${option} not loaded correctly"</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>filename=Page_${option}_Loaded.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240703 22:38:38.777" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Page_Administraci%C3%B3n%20P%C3%BAblica_Loaded.png"&gt;&lt;img src="Page_Administraci%C3%B3n%20P%C3%BAblica_Loaded.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240703 22:38:38.458" endtime="20240703 22:38:38.777"/>
+</kw>
+<status status="PASS" starttime="20240703 22:38:38.458" endtime="20240703 22:38:38.777"/>
+</kw>
+<status status="PASS" starttime="20240703 22:38:36.393" endtime="20240703 22:38:38.777"/>
+</kw>
+<kw name="Open drowpdown Sectores and choose &quot;Aeronáutica&quot;" library="keywords" sourcename="Open drowpdown Sectores and choose &quot;${option}&quot;">
+<doc>Opens dropdown Sectores and choose the option that we gives as parameter</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n==== Verify step: Open drowpdown Sectores and choose "${option}" ====\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240703 22:38:38.779" endtime="20240703 22:38:38.779"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<arg>30</arg>
+<arg>error= The dropdown "Sectores" has not loaded</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240703 22:38:38.779" endtime="20240703 22:38:38.793"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<arg>30</arg>
+<arg>error= The dropdown "Sectores" is not enabled</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240703 22:38:38.793" endtime="20240703 22:38:38.810"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240703 22:38:38.811" level="INFO">Simulating Mouse Over on element '//ul[@id="menu-header-es-1"]//span[text()="Sectores"]'.</msg>
+<status status="PASS" starttime="20240703 22:38:38.810" endtime="20240703 22:38:39.086"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<arg>error= The option "${option}" has not loaded correctly</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240703 22:38:39.086" endtime="20240703 22:38:39.102"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<arg>error= The option "${option}" is not enabled</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240703 22:38:39.102" endtime="20240703 22:38:39.119"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240703 22:38:39.120" level="INFO">Clicking element '//ul[@id="menu-header-es-1"]//span[text()="Aeronáutica"]'.</msg>
+<status status="PASS" starttime="20240703 22:38:39.119" endtime="20240703 22:38:40.416"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<var>${option_is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//h1[text()="${option}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//h1[text()="${option}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240703 22:38:40.456" level="INFO">Element '//h1[text()="Aeronáutica"]' is displayed.</msg>
+<status status="PASS" starttime="20240703 22:38:40.417" endtime="20240703 22:38:40.456"/>
+</kw>
+<msg timestamp="20240703 22:38:40.456" level="INFO">${option_is_visible} = ('PASS', None)</msg>
+<status status="PASS" starttime="20240703 22:38:40.417" endtime="20240703 22:38:40.456"/>
+</kw>
+<kw name="Convert To Upper Case" library="String">
+<var>${option_uppercase}</var>
+<arg>${option}</arg>
+<doc>Converts string to upper case.</doc>
+<msg timestamp="20240703 22:38:40.457" level="INFO">${option_uppercase} = AERONÁUTICA</msg>
+<status status="PASS" starttime="20240703 22:38:40.456" endtime="20240703 22:38:40.457"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<var>${option_uppercase_is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//h1[text()="${option_uppercase}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//h1[text()="${option_uppercase}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240703 22:38:40.858" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-43.png"&gt;&lt;img src="selenium-screenshot-43.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240703 22:38:40.858" level="FAIL">Element with locator '//h1[text()="AERONÁUTICA"]' not found.</msg>
+<status status="FAIL" starttime="20240703 22:38:40.458" endtime="20240703 22:38:40.859"/>
+</kw>
+<msg timestamp="20240703 22:38:40.859" level="INFO">${option_uppercase_is_visible} = ('FAIL', 'Element with locator \'//h1[text()="AERONÁUTICA"]\' not found.')</msg>
+<status status="PASS" starttime="20240703 22:38:40.457" endtime="20240703 22:38:40.860"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${option_is_visible}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>filename=Page_${option}_Loaded.png</arg>
+<arg>ELSE IF</arg>
+<arg>${option_uppercase_is_visible}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>filename=Page_${option}_Loaded.png</arg>
+<arg>ELSE</arg>
+<arg>Log Error And Generate CSV</arg>
+<arg>error_message="Page ${option} not loaded correctly"</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>filename=Page_${option}_Loaded.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240703 22:38:41.193" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Page_Aeron%C3%A1utica_Loaded.png"&gt;&lt;img src="Page_Aeron%C3%A1utica_Loaded.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240703 22:38:40.860" endtime="20240703 22:38:41.193"/>
+</kw>
+<status status="PASS" starttime="20240703 22:38:40.860" endtime="20240703 22:38:41.193"/>
+</kw>
+<status status="PASS" starttime="20240703 22:38:38.778" endtime="20240703 22:38:41.193"/>
+</kw>
+<kw name="Open drowpdown Sectores and choose &quot;Automoción&quot;" library="keywords" sourcename="Open drowpdown Sectores and choose &quot;${option}&quot;">
+<doc>Opens dropdown Sectores and choose the option that we gives as parameter</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n==== Verify step: Open drowpdown Sectores and choose "${option}" ====\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240703 22:38:41.194" endtime="20240703 22:38:41.195"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<arg>30</arg>
+<arg>error= The dropdown "Sectores" has not loaded</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240703 22:38:41.195" endtime="20240703 22:38:41.209"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<arg>30</arg>
+<arg>error= The dropdown "Sectores" is not enabled</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240703 22:38:41.209" endtime="20240703 22:38:41.226"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240703 22:38:41.227" level="INFO">Simulating Mouse Over on element '//ul[@id="menu-header-es-1"]//span[text()="Sectores"]'.</msg>
+<status status="PASS" starttime="20240703 22:38:41.226" endtime="20240703 22:38:41.498"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<arg>error= The option "${option}" has not loaded correctly</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240703 22:38:41.498" endtime="20240703 22:38:41.514"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<arg>error= The option "${option}" is not enabled</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240703 22:38:41.514" endtime="20240703 22:38:41.532"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240703 22:38:41.533" level="INFO">Clicking element '//ul[@id="menu-header-es-1"]//span[text()="Automoción"]'.</msg>
+<status status="PASS" starttime="20240703 22:38:41.532" endtime="20240703 22:38:42.840"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<var>${option_is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//h1[text()="${option}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//h1[text()="${option}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240703 22:38:42.876" level="INFO">Element '//h1[text()="Automoción"]' is displayed.</msg>
+<status status="PASS" starttime="20240703 22:38:42.841" endtime="20240703 22:38:42.877"/>
+</kw>
+<msg timestamp="20240703 22:38:42.877" level="INFO">${option_is_visible} = ('PASS', None)</msg>
+<status status="PASS" starttime="20240703 22:38:42.840" endtime="20240703 22:38:42.877"/>
+</kw>
+<kw name="Convert To Upper Case" library="String">
+<var>${option_uppercase}</var>
+<arg>${option}</arg>
+<doc>Converts string to upper case.</doc>
+<msg timestamp="20240703 22:38:42.878" level="INFO">${option_uppercase} = AUTOMOCIÓN</msg>
+<status status="PASS" starttime="20240703 22:38:42.877" endtime="20240703 22:38:42.878"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<var>${option_uppercase_is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//h1[text()="${option_uppercase}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//h1[text()="${option_uppercase}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240703 22:38:43.244" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-44.png"&gt;&lt;img src="selenium-screenshot-44.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240703 22:38:43.245" level="FAIL">Element with locator '//h1[text()="AUTOMOCIÓN"]' not found.</msg>
+<status status="FAIL" starttime="20240703 22:38:42.878" endtime="20240703 22:38:43.246"/>
+</kw>
+<msg timestamp="20240703 22:38:43.246" level="INFO">${option_uppercase_is_visible} = ('FAIL', 'Element with locator \'//h1[text()="AUTOMOCIÓN"]\' not found.')</msg>
+<status status="PASS" starttime="20240703 22:38:42.878" endtime="20240703 22:38:43.246"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${option_is_visible}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>filename=Page_${option}_Loaded.png</arg>
+<arg>ELSE IF</arg>
+<arg>${option_uppercase_is_visible}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>filename=Page_${option}_Loaded.png</arg>
+<arg>ELSE</arg>
+<arg>Log Error And Generate CSV</arg>
+<arg>error_message="Page ${option} not loaded correctly"</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>filename=Page_${option}_Loaded.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240703 22:38:43.603" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Page_Automoci%C3%B3n_Loaded.png"&gt;&lt;img src="Page_Automoci%C3%B3n_Loaded.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240703 22:38:43.247" endtime="20240703 22:38:43.604"/>
+</kw>
+<status status="PASS" starttime="20240703 22:38:43.246" endtime="20240703 22:38:43.604"/>
+</kw>
+<status status="PASS" starttime="20240703 22:38:41.194" endtime="20240703 22:38:43.604"/>
+</kw>
+<kw name="Open drowpdown Sectores and choose &quot;Banca, Finanzas &amp; Seguros&quot;" library="keywords" sourcename="Open drowpdown Sectores and choose &quot;${option}&quot;">
+<doc>Opens dropdown Sectores and choose the option that we gives as parameter</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n==== Verify step: Open drowpdown Sectores and choose "${option}" ====\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240703 22:38:43.605" endtime="20240703 22:38:43.606"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<arg>30</arg>
+<arg>error= The dropdown "Sectores" has not loaded</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240703 22:38:43.606" endtime="20240703 22:38:43.619"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<arg>30</arg>
+<arg>error= The dropdown "Sectores" is not enabled</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240703 22:38:43.620" endtime="20240703 22:38:43.636"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240703 22:38:43.637" level="INFO">Simulating Mouse Over on element '//ul[@id="menu-header-es-1"]//span[text()="Sectores"]'.</msg>
+<status status="PASS" starttime="20240703 22:38:43.637" endtime="20240703 22:38:43.918"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<arg>error= The option "${option}" has not loaded correctly</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240703 22:38:43.918" endtime="20240703 22:38:43.934"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<arg>error= The option "${option}" is not enabled</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240703 22:38:43.934" endtime="20240703 22:38:43.951"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240703 22:38:43.952" level="INFO">Clicking element '//ul[@id="menu-header-es-1"]//span[text()="Banca, Finanzas &amp; Seguros"]'.</msg>
+<status status="PASS" starttime="20240703 22:38:43.951" endtime="20240703 22:38:45.255"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<var>${option_is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//h1[text()="${option}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//h1[text()="${option}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240703 22:38:45.281" level="INFO">Element '//h1[text()="Banca, Finanzas &amp; Seguros"]' is displayed.</msg>
+<status status="PASS" starttime="20240703 22:38:45.256" endtime="20240703 22:38:45.282"/>
+</kw>
+<msg timestamp="20240703 22:38:45.282" level="INFO">${option_is_visible} = ('PASS', None)</msg>
+<status status="PASS" starttime="20240703 22:38:45.255" endtime="20240703 22:38:45.282"/>
+</kw>
+<kw name="Convert To Upper Case" library="String">
+<var>${option_uppercase}</var>
+<arg>${option}</arg>
+<doc>Converts string to upper case.</doc>
+<msg timestamp="20240703 22:38:45.283" level="INFO">${option_uppercase} = BANCA, FINANZAS &amp; SEGUROS</msg>
+<status status="PASS" starttime="20240703 22:38:45.282" endtime="20240703 22:38:45.283"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<var>${option_uppercase_is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//h1[text()="${option_uppercase}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//h1[text()="${option_uppercase}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240703 22:38:45.665" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-45.png"&gt;&lt;img src="selenium-screenshot-45.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240703 22:38:45.666" level="FAIL">Element with locator '//h1[text()="BANCA, FINANZAS &amp; SEGUROS"]' not found.</msg>
+<status status="FAIL" starttime="20240703 22:38:45.284" endtime="20240703 22:38:45.667"/>
+</kw>
+<msg timestamp="20240703 22:38:45.667" level="INFO">${option_uppercase_is_visible} = ('FAIL', 'Element with locator \'//h1[text()="BANCA, FINANZAS &amp; SEGUROS"]\' not found.')</msg>
+<status status="PASS" starttime="20240703 22:38:45.283" endtime="20240703 22:38:45.667"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${option_is_visible}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>filename=Page_${option}_Loaded.png</arg>
+<arg>ELSE IF</arg>
+<arg>${option_uppercase_is_visible}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>filename=Page_${option}_Loaded.png</arg>
+<arg>ELSE</arg>
+<arg>Log Error And Generate CSV</arg>
+<arg>error_message="Page ${option} not loaded correctly"</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>filename=Page_${option}_Loaded.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240703 22:38:46.011" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Page_Banca%2C%20Finanzas%20%26%20Seguros_Loaded.png"&gt;&lt;img src="Page_Banca%2C%20Finanzas%20%26%20Seguros_Loaded.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240703 22:38:45.668" endtime="20240703 22:38:46.012"/>
+</kw>
+<status status="PASS" starttime="20240703 22:38:45.668" endtime="20240703 22:38:46.012"/>
+</kw>
+<status status="PASS" starttime="20240703 22:38:43.605" endtime="20240703 22:38:46.012"/>
+</kw>
+<kw name="Open drowpdown Sectores and choose &quot;Defensa, Seguridad &amp; Naval&quot;" library="keywords" sourcename="Open drowpdown Sectores and choose &quot;${option}&quot;">
+<doc>Opens dropdown Sectores and choose the option that we gives as parameter</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n==== Verify step: Open drowpdown Sectores and choose "${option}" ====\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240703 22:38:46.013" endtime="20240703 22:38:46.014"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<arg>30</arg>
+<arg>error= The dropdown "Sectores" has not loaded</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240703 22:38:46.014" endtime="20240703 22:38:46.028"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<arg>30</arg>
+<arg>error= The dropdown "Sectores" is not enabled</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240703 22:38:46.028" endtime="20240703 22:38:46.045"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240703 22:38:46.046" level="INFO">Simulating Mouse Over on element '//ul[@id="menu-header-es-1"]//span[text()="Sectores"]'.</msg>
+<status status="PASS" starttime="20240703 22:38:46.045" endtime="20240703 22:38:46.313"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<arg>error= The option "${option}" has not loaded correctly</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240703 22:38:46.313" endtime="20240703 22:38:46.328"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<arg>error= The option "${option}" is not enabled</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240703 22:38:46.329" endtime="20240703 22:38:46.345"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240703 22:38:46.346" level="INFO">Clicking element '//ul[@id="menu-header-es-1"]//span[text()="Defensa, Seguridad &amp; Naval"]'.</msg>
+<status status="PASS" starttime="20240703 22:38:46.345" endtime="20240703 22:38:47.764"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<var>${option_is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//h1[text()="${option}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//h1[text()="${option}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240703 22:38:47.801" level="INFO">Element '//h1[text()="Defensa, Seguridad &amp; Naval"]' is displayed.</msg>
+<status status="PASS" starttime="20240703 22:38:47.764" endtime="20240703 22:38:47.801"/>
+</kw>
+<msg timestamp="20240703 22:38:47.801" level="INFO">${option_is_visible} = ('PASS', None)</msg>
+<status status="PASS" starttime="20240703 22:38:47.764" endtime="20240703 22:38:47.801"/>
+</kw>
+<kw name="Convert To Upper Case" library="String">
+<var>${option_uppercase}</var>
+<arg>${option}</arg>
+<doc>Converts string to upper case.</doc>
+<msg timestamp="20240703 22:38:47.802" level="INFO">${option_uppercase} = DEFENSA, SEGURIDAD &amp; NAVAL</msg>
+<status status="PASS" starttime="20240703 22:38:47.801" endtime="20240703 22:38:47.802"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<var>${option_uppercase_is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//h1[text()="${option_uppercase}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//h1[text()="${option_uppercase}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240703 22:38:48.153" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-46.png"&gt;&lt;img src="selenium-screenshot-46.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240703 22:38:48.154" level="FAIL">Element with locator '//h1[text()="DEFENSA, SEGURIDAD &amp; NAVAL"]' not found.</msg>
+<status status="FAIL" starttime="20240703 22:38:47.803" endtime="20240703 22:38:48.155"/>
+</kw>
+<msg timestamp="20240703 22:38:48.155" level="INFO">${option_uppercase_is_visible} = ('FAIL', 'Element with locator \'//h1[text()="DEFENSA, SEGURIDAD &amp; NAVAL"]\' not found.')</msg>
+<status status="PASS" starttime="20240703 22:38:47.802" endtime="20240703 22:38:48.155"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${option_is_visible}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>filename=Page_${option}_Loaded.png</arg>
+<arg>ELSE IF</arg>
+<arg>${option_uppercase_is_visible}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>filename=Page_${option}_Loaded.png</arg>
+<arg>ELSE</arg>
+<arg>Log Error And Generate CSV</arg>
+<arg>error_message="Page ${option} not loaded correctly"</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>filename=Page_${option}_Loaded.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240703 22:38:48.474" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Page_Defensa%2C%20Seguridad%20%26%20Naval_Loaded.png"&gt;&lt;img src="Page_Defensa%2C%20Seguridad%20%26%20Naval_Loaded.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240703 22:38:48.156" endtime="20240703 22:38:48.474"/>
+</kw>
+<status status="PASS" starttime="20240703 22:38:48.156" endtime="20240703 22:38:48.474"/>
+</kw>
+<status status="PASS" starttime="20240703 22:38:46.012" endtime="20240703 22:38:48.475"/>
+</kw>
+<kw name="Open drowpdown Sectores and choose &quot;Energía &amp; Medio Ambiente&quot;" library="keywords" sourcename="Open drowpdown Sectores and choose &quot;${option}&quot;">
+<doc>Opens dropdown Sectores and choose the option that we gives as parameter</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n==== Verify step: Open drowpdown Sectores and choose "${option}" ====\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240703 22:38:48.476" endtime="20240703 22:38:48.476"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<arg>30</arg>
+<arg>error= The dropdown "Sectores" has not loaded</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240703 22:38:48.476" endtime="20240703 22:38:48.490"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<arg>30</arg>
+<arg>error= The dropdown "Sectores" is not enabled</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240703 22:38:48.491" endtime="20240703 22:38:48.507"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240703 22:38:48.508" level="INFO">Simulating Mouse Over on element '//ul[@id="menu-header-es-1"]//span[text()="Sectores"]'.</msg>
+<status status="PASS" starttime="20240703 22:38:48.508" endtime="20240703 22:38:48.780"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<arg>error= The option "${option}" has not loaded correctly</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240703 22:38:48.781" endtime="20240703 22:38:48.798"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<arg>error= The option "${option}" is not enabled</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240703 22:38:48.798" endtime="20240703 22:38:48.815"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240703 22:38:48.816" level="INFO">Clicking element '//ul[@id="menu-header-es-1"]//span[text()="Energía &amp; Medio Ambiente"]'.</msg>
+<status status="PASS" starttime="20240703 22:38:48.816" endtime="20240703 22:38:49.947"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<var>${option_is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//h1[text()="${option}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//h1[text()="${option}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240703 22:38:50.252" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-47.png"&gt;&lt;img src="selenium-screenshot-47.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240703 22:38:50.252" level="FAIL">Element with locator '//h1[text()="Energía &amp; Medio Ambiente"]' not found.</msg>
+<status status="FAIL" starttime="20240703 22:38:49.948" endtime="20240703 22:38:50.254"/>
+</kw>
+<msg timestamp="20240703 22:38:50.254" level="INFO">${option_is_visible} = ('FAIL', 'Element with locator \'//h1[text()="Energía &amp; Medio Ambiente"]\' not found.')</msg>
+<status status="PASS" starttime="20240703 22:38:49.947" endtime="20240703 22:38:50.254"/>
+</kw>
+<kw name="Convert To Upper Case" library="String">
+<var>${option_uppercase}</var>
+<arg>${option}</arg>
+<doc>Converts string to upper case.</doc>
+<msg timestamp="20240703 22:38:50.255" level="INFO">${option_uppercase} = ENERGÍA &amp; MEDIO AMBIENTE</msg>
+<status status="PASS" starttime="20240703 22:38:50.254" endtime="20240703 22:38:50.255"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<var>${option_uppercase_is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//h1[text()="${option_uppercase}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//h1[text()="${option_uppercase}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240703 22:38:50.499" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-48.png"&gt;&lt;img src="selenium-screenshot-48.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240703 22:38:50.499" level="FAIL">Element with locator '//h1[text()="ENERGÍA &amp; MEDIO AMBIENTE"]' not found.</msg>
+<status status="FAIL" starttime="20240703 22:38:50.255" endtime="20240703 22:38:50.500"/>
+</kw>
+<msg timestamp="20240703 22:38:50.501" level="INFO">${option_uppercase_is_visible} = ('FAIL', 'Element with locator \'//h1[text()="ENERGÍA &amp; MEDIO AMBIENTE"]\' not found.')</msg>
+<status status="PASS" starttime="20240703 22:38:50.255" endtime="20240703 22:38:50.501"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${option_is_visible}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>filename=Page_${option}_Loaded.png</arg>
+<arg>ELSE IF</arg>
+<arg>${option_uppercase_is_visible}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>filename=Page_${option}_Loaded.png</arg>
+<arg>ELSE</arg>
+<arg>Log Error And Generate CSV</arg>
+<arg>error_message="Page ${option} not loaded correctly"</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>filename=Page_${option}_Loaded.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240703 22:38:50.737" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Page_Energ%C3%ADa%20%26%20Medio%20Ambiente_Loaded.png"&gt;&lt;img src="Page_Energ%C3%ADa%20%26%20Medio%20Ambiente_Loaded.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240703 22:38:50.502" endtime="20240703 22:38:50.738"/>
+</kw>
+<status status="PASS" starttime="20240703 22:38:50.501" endtime="20240703 22:38:50.738"/>
+</kw>
+<status status="PASS" starttime="20240703 22:38:48.475" endtime="20240703 22:38:50.738"/>
+</kw>
+<kw name="Open drowpdown Sectores and choose &quot;Espacio&quot;" library="keywords" sourcename="Open drowpdown Sectores and choose &quot;${option}&quot;">
+<doc>Opens dropdown Sectores and choose the option that we gives as parameter</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n==== Verify step: Open drowpdown Sectores and choose "${option}" ====\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240703 22:38:50.739" endtime="20240703 22:38:50.740"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<arg>30</arg>
+<arg>error= The dropdown "Sectores" has not loaded</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240703 22:38:50.740" endtime="20240703 22:38:50.754"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<arg>30</arg>
+<arg>error= The dropdown "Sectores" is not enabled</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240703 22:38:50.754" endtime="20240703 22:38:50.771"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240703 22:38:50.772" level="INFO">Simulating Mouse Over on element '//ul[@id="menu-header-es-1"]//span[text()="Sectores"]'.</msg>
+<status status="PASS" starttime="20240703 22:38:50.771" endtime="20240703 22:38:51.047"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<arg>error= The option "${option}" has not loaded correctly</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240703 22:38:51.047" endtime="20240703 22:38:51.063"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<arg>error= The option "${option}" is not enabled</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240703 22:38:51.063" endtime="20240703 22:38:51.080"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240703 22:38:51.082" level="INFO">Clicking element '//ul[@id="menu-header-es-1"]//span[text()="Espacio"]'.</msg>
+<status status="PASS" starttime="20240703 22:38:51.080" endtime="20240703 22:38:52.351"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<var>${option_is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//h1[text()="${option}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//h1[text()="${option}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240703 22:38:52.388" level="INFO">Element '//h1[text()="Espacio"]' is displayed.</msg>
+<status status="PASS" starttime="20240703 22:38:52.352" endtime="20240703 22:38:52.388"/>
+</kw>
+<msg timestamp="20240703 22:38:52.388" level="INFO">${option_is_visible} = ('PASS', None)</msg>
+<status status="PASS" starttime="20240703 22:38:52.352" endtime="20240703 22:38:52.388"/>
+</kw>
+<kw name="Convert To Upper Case" library="String">
+<var>${option_uppercase}</var>
+<arg>${option}</arg>
+<doc>Converts string to upper case.</doc>
+<msg timestamp="20240703 22:38:52.389" level="INFO">${option_uppercase} = ESPACIO</msg>
+<status status="PASS" starttime="20240703 22:38:52.389" endtime="20240703 22:38:52.389"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<var>${option_uppercase_is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//h1[text()="${option_uppercase}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//h1[text()="${option_uppercase}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240703 22:38:52.738" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-49.png"&gt;&lt;img src="selenium-screenshot-49.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240703 22:38:52.739" level="FAIL">Element with locator '//h1[text()="ESPACIO"]' not found.</msg>
+<status status="FAIL" starttime="20240703 22:38:52.390" endtime="20240703 22:38:52.741"/>
+</kw>
+<msg timestamp="20240703 22:38:52.741" level="INFO">${option_uppercase_is_visible} = ('FAIL', 'Element with locator \'//h1[text()="ESPACIO"]\' not found.')</msg>
+<status status="PASS" starttime="20240703 22:38:52.389" endtime="20240703 22:38:52.741"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${option_is_visible}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>filename=Page_${option}_Loaded.png</arg>
+<arg>ELSE IF</arg>
+<arg>${option_uppercase_is_visible}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>filename=Page_${option}_Loaded.png</arg>
+<arg>ELSE</arg>
+<arg>Log Error And Generate CSV</arg>
+<arg>error_message="Page ${option} not loaded correctly"</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>filename=Page_${option}_Loaded.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240703 22:38:53.061" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Page_Espacio_Loaded.png"&gt;&lt;img src="Page_Espacio_Loaded.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240703 22:38:52.742" endtime="20240703 22:38:53.061"/>
+</kw>
+<status status="PASS" starttime="20240703 22:38:52.741" endtime="20240703 22:38:53.061"/>
+</kw>
+<status status="PASS" starttime="20240703 22:38:50.738" endtime="20240703 22:38:53.062"/>
+</kw>
+<kw name="Open drowpdown Sectores and choose &quot;Ferroviario &amp; Movilidad&quot;" library="keywords" sourcename="Open drowpdown Sectores and choose &quot;${option}&quot;">
+<doc>Opens dropdown Sectores and choose the option that we gives as parameter</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n==== Verify step: Open drowpdown Sectores and choose "${option}" ====\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240703 22:38:53.063" endtime="20240703 22:38:53.063"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<arg>30</arg>
+<arg>error= The dropdown "Sectores" has not loaded</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240703 22:38:53.063" endtime="20240703 22:38:53.077"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<arg>30</arg>
+<arg>error= The dropdown "Sectores" is not enabled</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240703 22:38:53.077" endtime="20240703 22:38:53.095"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240703 22:38:53.096" level="INFO">Simulating Mouse Over on element '//ul[@id="menu-header-es-1"]//span[text()="Sectores"]'.</msg>
+<status status="PASS" starttime="20240703 22:38:53.095" endtime="20240703 22:38:53.369"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<arg>error= The option "${option}" has not loaded correctly</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240703 22:38:53.369" endtime="20240703 22:38:53.396"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<arg>error= The option "${option}" is not enabled</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240703 22:38:53.396" endtime="20240703 22:38:53.413"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240703 22:38:53.415" level="INFO">Clicking element '//ul[@id="menu-header-es-1"]//span[text()="Ferroviario &amp; Movilidad"]'.</msg>
+<status status="PASS" starttime="20240703 22:38:53.414" endtime="20240703 22:38:54.774"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<var>${option_is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//h1[text()="${option}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//h1[text()="${option}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240703 22:38:54.810" level="INFO">Element '//h1[text()="Ferroviario &amp; Movilidad"]' is displayed.</msg>
+<status status="PASS" starttime="20240703 22:38:54.775" endtime="20240703 22:38:54.810"/>
+</kw>
+<msg timestamp="20240703 22:38:54.810" level="INFO">${option_is_visible} = ('PASS', None)</msg>
+<status status="PASS" starttime="20240703 22:38:54.774" endtime="20240703 22:38:54.811"/>
+</kw>
+<kw name="Convert To Upper Case" library="String">
+<var>${option_uppercase}</var>
+<arg>${option}</arg>
+<doc>Converts string to upper case.</doc>
+<msg timestamp="20240703 22:38:54.811" level="INFO">${option_uppercase} = FERROVIARIO &amp; MOVILIDAD</msg>
+<status status="PASS" starttime="20240703 22:38:54.811" endtime="20240703 22:38:54.812"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<var>${option_uppercase_is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//h1[text()="${option_uppercase}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//h1[text()="${option_uppercase}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240703 22:38:55.215" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-50.png"&gt;&lt;img src="selenium-screenshot-50.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240703 22:38:55.215" level="FAIL">Element with locator '//h1[text()="FERROVIARIO &amp; MOVILIDAD"]' not found.</msg>
+<status status="FAIL" starttime="20240703 22:38:54.812" endtime="20240703 22:38:55.217"/>
+</kw>
+<msg timestamp="20240703 22:38:55.217" level="INFO">${option_uppercase_is_visible} = ('FAIL', 'Element with locator \'//h1[text()="FERROVIARIO &amp; MOVILIDAD"]\' not found.')</msg>
+<status status="PASS" starttime="20240703 22:38:54.812" endtime="20240703 22:38:55.217"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${option_is_visible}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>filename=Page_${option}_Loaded.png</arg>
+<arg>ELSE IF</arg>
+<arg>${option_uppercase_is_visible}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>filename=Page_${option}_Loaded.png</arg>
+<arg>ELSE</arg>
+<arg>Log Error And Generate CSV</arg>
+<arg>error_message="Page ${option} not loaded correctly"</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>filename=Page_${option}_Loaded.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240703 22:38:55.577" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Page_Ferroviario%20%26%20Movilidad_Loaded.png"&gt;&lt;img src="Page_Ferroviario%20%26%20Movilidad_Loaded.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240703 22:38:55.218" endtime="20240703 22:38:55.577"/>
+</kw>
+<status status="PASS" starttime="20240703 22:38:55.218" endtime="20240703 22:38:55.577"/>
+</kw>
+<status status="PASS" starttime="20240703 22:38:53.062" endtime="20240703 22:38:55.577"/>
+</kw>
+<kw name="Open drowpdown Sectores and choose &quot;Life Sciences &amp; Salud&quot;" library="keywords" sourcename="Open drowpdown Sectores and choose &quot;${option}&quot;">
+<doc>Opens dropdown Sectores and choose the option that we gives as parameter</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n==== Verify step: Open drowpdown Sectores and choose "${option}" ====\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240703 22:38:55.578" endtime="20240703 22:38:55.579"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<arg>30</arg>
+<arg>error= The dropdown "Sectores" has not loaded</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240703 22:38:55.579" endtime="20240703 22:38:55.593"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<arg>30</arg>
+<arg>error= The dropdown "Sectores" is not enabled</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240703 22:38:55.593" endtime="20240703 22:38:55.610"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${DWN_SECTORES}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20240703 22:38:55.611" level="INFO">Simulating Mouse Over on element '//ul[@id="menu-header-es-1"]//span[text()="Sectores"]'.</msg>
+<status status="PASS" starttime="20240703 22:38:55.611" endtime="20240703 22:38:55.888"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<arg>error= The option "${option}" has not loaded correctly</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240703 22:38:55.888" endtime="20240703 22:38:55.904"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<arg>error= The option "${option}" is not enabled</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240703 22:38:55.905" endtime="20240703 22:38:55.923"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//ul[@id="menu-header-es-1"]//span[text()="${option}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240703 22:38:55.924" level="INFO">Clicking element '//ul[@id="menu-header-es-1"]//span[text()="Life Sciences &amp; Salud"]'.</msg>
+<status status="PASS" starttime="20240703 22:38:55.923" endtime="20240703 22:38:57.296"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<var>${option_is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//h1[text()="${option}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//h1[text()="${option}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240703 22:38:57.697" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-51.png"&gt;&lt;img src="selenium-screenshot-51.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240703 22:38:57.697" level="FAIL">Element with locator '//h1[text()="Life Sciences &amp; Salud"]' not found.</msg>
+<status status="FAIL" starttime="20240703 22:38:57.296" endtime="20240703 22:38:57.699"/>
+</kw>
+<msg timestamp="20240703 22:38:57.699" level="INFO">${option_is_visible} = ('FAIL', 'Element with locator \'//h1[text()="Life Sciences &amp; Salud"]\' not found.')</msg>
+<status status="PASS" starttime="20240703 22:38:57.296" endtime="20240703 22:38:57.699"/>
+</kw>
+<kw name="Convert To Upper Case" library="String">
+<var>${option_uppercase}</var>
+<arg>${option}</arg>
+<doc>Converts string to upper case.</doc>
+<msg timestamp="20240703 22:38:57.700" level="INFO">${option_uppercase} = LIFE SCIENCES &amp; SALUD</msg>
+<status status="PASS" starttime="20240703 22:38:57.700" endtime="20240703 22:38:57.700"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" library="BuiltIn">
+<var>${option_uppercase_is_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//h1[text()="${option_uppercase}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//h1[text()="${option_uppercase}"]</arg>
+<arg>timeout=10s</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240703 22:38:58.095" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-52.png"&gt;&lt;img src="selenium-screenshot-52.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240703 22:38:58.096" level="FAIL">Element with locator '//h1[text()="LIFE SCIENCES &amp; SALUD"]' not found.</msg>
+<status status="FAIL" starttime="20240703 22:38:57.701" endtime="20240703 22:38:58.097"/>
+</kw>
+<msg timestamp="20240703 22:38:58.097" level="INFO">${option_uppercase_is_visible} = ('FAIL', 'Element with locator \'//h1[text()="LIFE SCIENCES &amp; SALUD"]\' not found.')</msg>
+<status status="PASS" starttime="20240703 22:38:57.701" endtime="20240703 22:38:58.097"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${option_is_visible}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>filename=Page_${option}_Loaded.png</arg>
+<arg>ELSE IF</arg>
+<arg>${option_uppercase_is_visible}</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>filename=Page_${option}_Loaded.png</arg>
+<arg>ELSE</arg>
+<arg>Log Error And Generate CSV</arg>
+<arg>error_message="Page ${option} not loaded correctly"</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>filename=Page_${option}_Loaded.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240703 22:38:58.463" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Page_Life%20Sciences%20%26%20Salud_Loaded.png"&gt;&lt;img src="Page_Life%20Sciences%20%26%20Salud_Loaded.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240703 22:38:58.098" endtime="20240703 22:38:58.464"/>
+</kw>
+<status status="PASS" starttime="20240703 22:38:58.097" endtime="20240703 22:38:58.464"/>
+</kw>
+<status status="PASS" starttime="20240703 22:38:55.578" endtime="20240703 22:38:58.464"/>
+</kw>
+<kw name="Go To Home Page" library="keywords">
+<doc>Goes to the home page from selected option</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n==== Verify step: Go To Home ====\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240703 22:38:58.465" endtime="20240703 22:38:58.467"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BUT_HOME}</arg>
+<arg>30</arg>
+<arg>error= The HOME option is not visible</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240703 22:38:58.467" endtime="20240703 22:38:58.484"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${BUT_HOME}</arg>
+<arg>30</arg>
+<arg>error= The HOME option is not enabled</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20240703 22:38:58.484" endtime="20240703 22:38:58.501"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUT_HOME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240703 22:38:58.502" level="INFO">Clicking element '//ul[@id="menu-header-es-1"]//span[text()="Home"]'.</msg>
+<status status="PASS" starttime="20240703 22:38:58.501" endtime="20240703 22:38:59.081"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${HOME}</arg>
+<arg>message= Page has not loaded correctly</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20240703 22:38:59.109" level="INFO">Page title is 'Home - ALTEN Spain'.</msg>
+<status status="PASS" starttime="20240703 22:38:59.082" endtime="20240703 22:38:59.109"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>filename=To_Main_Page_Loaded.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240703 22:38:59.493" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="To_Main_Page_Loaded.png"&gt;&lt;img src="To_Main_Page_Loaded.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240703 22:38:59.109" endtime="20240703 22:38:59.493"/>
+</kw>
+<status status="PASS" starttime="20240703 22:38:58.464" endtime="20240703 22:38:59.493"/>
+</kw>
+<kw name="Close Browser and generate csv" library="keywords">
+<doc>Closes browser and generate CSV</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n==== Ending Test====\n</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240703 22:38:59.494" endtime="20240703 22:38:59.495"/>
+</kw>
+<kw name="Create File" library="OperatingSystem">
+<arg>path=${PATH}/${TEST NAME}.csv</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<msg timestamp="20240703 22:38:59.496" level="INFO" html="true">Created file '&lt;a href="file://D:\PruebaTecnica\Miguel_Jesus_Moreno_Hernandez\results\Verify Sector pages.csv"&gt;D:\PruebaTecnica\Miguel_Jesus_Moreno_Hernandez\results\Verify Sector pages.csv&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20240703 22:38:59.495" endtime="20240703 22:38:59.496"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${csv_data}</var>
+<arg>Test: ${TEST NAME}</arg>
+<arg>Result: PASSED</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20240703 22:38:59.497" level="INFO">${csv_data} = ['Test: Verify Sector pages', 'Result: PASSED']</msg>
+<status status="PASS" starttime="20240703 22:38:59.496" endtime="20240703 22:38:59.497"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${csv_data}</var>
+<arg>${csv_data}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20240703 22:38:59.498" level="INFO">${csv_data} = ['Test: Verify Sector pages', 'Result: PASSED']</msg>
+<status status="PASS" starttime="20240703 22:38:59.497" endtime="20240703 22:38:59.498"/>
+</kw>
+<kw name="Append To File" library="OperatingSystem">
+<arg>${PATH}/${TEST NAME}.csv</arg>
+<arg>${csv_data}</arg>
+<arg>encoding=UTF-8</arg>
+<doc>Appends the given content to the specified file.</doc>
+<msg timestamp="20240703 22:38:59.500" level="INFO" html="true">Appended to file '&lt;a href="file://D:\PruebaTecnica\Miguel_Jesus_Moreno_Hernandez\results\Verify Sector pages.csv"&gt;D:\PruebaTecnica\Miguel_Jesus_Moreno_Hernandez\results\Verify Sector pages.csv&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20240703 22:38:59.498" endtime="20240703 22:38:59.500"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240703 22:38:59.500" endtime="20240703 22:39:01.728"/>
+</kw>
+<status status="PASS" starttime="20240703 22:38:59.494" endtime="20240703 22:39:01.728"/>
+</kw>
+<status status="PASS" starttime="20240703 22:38:30.311" endtime="20240703 22:39:01.729"/>
+</test>
+<kw name="Run Keyword If Any Tests Failed" library="BuiltIn" type="TEARDOWN">
+<arg>Log Error And Generate CSV</arg>
+<arg>${PREV_TEST_MESSAGE}</arg>
+<doc>Runs the given keyword with the given arguments, if one or more tests failed.</doc>
+<status status="PASS" starttime="20240703 22:39:01.730" endtime="20240703 22:39:01.730"/>
+</kw>
+<status status="PASS" starttime="20240703 22:38:30.067" endtime="20240703 22:39:01.730"/>
+</suite>
+<status status="PASS" starttime="20240703 22:38:30.064" endtime="20240703 22:39:01.733"/>
+</suite>
+<status status="PASS" starttime="20240703 22:38:30.025" endtime="20240703 22:39:01.735"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Miguel Jesus Moreno Hernandez">Miguel Jesus Moreno Hernandez</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tests">Miguel Jesus Moreno Hernandez.Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="testAlten">Miguel Jesus Moreno Hernandez.Tests.testAlten</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
